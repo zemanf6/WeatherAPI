@@ -23,6 +23,21 @@ namespace WeatherAPI
         public MainWindow()
         {
             InitializeComponent();
+            ApiHelper.InitializeClient();
+        }
+
+        private async Task Load_Click()
+        {
+            var weatherInfo = await Processor.Load<WeatherWeatherModel>("http://api.openweathermap.org/data/2.5/weather?q=zlin&appid=41a61665eb46babbfdb06c73a74b7ee8");
+
+            weather.Text = $"Weather: {Math.Round(weatherInfo.Main.Temp - 273.15, 2)} °C";
+            weatherFeels.Text = $"Feels like: {Math.Round(weatherInfo.Main.Feels_like - 273.15, 2)} °C";
+
+        }
+
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            await Load_Click();
         }
     }
 }

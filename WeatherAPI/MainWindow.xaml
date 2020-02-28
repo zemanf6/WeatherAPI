@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherAPI"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" FontSize="22" Loaded="Window_Loaded"
+        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
     <Grid>
-        
+
+        <StackPanel>
+            <TextBlock x:Name="weatherType" Margin="10" FontWeight="Normal" FontSize="18"></TextBlock>
+            <TextBlock x:Name="weather" Margin="20" FontWeight="ExtraBold"></TextBlock>
+            <TextBlock x:Name="weatherFeels" Margin="20" FontWeight="Light" FontSize="18"></TextBlock>
+        </StackPanel>
     </Grid>
 </Window>
