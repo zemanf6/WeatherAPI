@@ -76,7 +76,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\WeatherDetailsModel.cs" />
     <Compile Include="Models\WeatherWeatherModel.cs" />
     <Compile Include="Models\WeatherModel.cs" />
     <Compile Include="Processor.cs" />

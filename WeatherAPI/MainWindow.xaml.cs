@@ -32,6 +32,8 @@ namespace WeatherAPI
 
             weather.Text = $"Weather: {Math.Round(weatherInfo.Main.Temp - 273.15, 2)} °C";
             weatherFeels.Text = $"Feels like: {Math.Round(weatherInfo.Main.Feels_like - 273.15, 2)} °C";
+            weatherMax.Text = $"Max temperature: {Math.Round(weatherInfo.Main.Temp_max - 273.15, 2)} °C";
+            weatherMin.Text = $"Min temperature: {Math.Round(weatherInfo.Main.Temp_min - 273.15, 2)} °C";
 
         }
 

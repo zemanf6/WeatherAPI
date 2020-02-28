@@ -11,7 +11,9 @@
         <StackPanel>
             <TextBlock x:Name="weatherType" Margin="10" FontWeight="Normal" FontSize="18"></TextBlock>
             <TextBlock x:Name="weather" Margin="20" FontWeight="ExtraBold"></TextBlock>
-            <TextBlock x:Name="weatherFeels" Margin="20" FontWeight="Light" FontSize="18"></TextBlock>
+            <TextBlock x:Name="weatherFeels" Margin="20" FontWeight="Light" FontSize="16"></TextBlock>
+            <TextBlock x:Name="weatherMin" Margin="0" FontWeight="Medium" FontSize="17"></TextBlock>
+            <TextBlock x:Name="weatherMax" Margin="0" FontWeight="Medium" FontSize="17"></TextBlock>
         </StackPanel>
     </Grid>
 </Window>
