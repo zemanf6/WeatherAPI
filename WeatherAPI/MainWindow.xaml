@@ -17,7 +17,7 @@
         </StackPanel>
         <TextBlock x:Name="weatherMin" HorizontalAlignment="Left" Padding="25,150,0,0" FontWeight="Medium" FontSize="17"></TextBlock>
         <TextBlock x:Name="weatherMax" HorizontalAlignment="Right" Padding="0,150,25,0" FontWeight="Medium" FontSize="17"></TextBlock>
-        
-        <TextBlock x:Name="city" HorizontalAlignment="Center" Padding="0,250,0,0" FontWeight="DemiBold" FontSize="30">Zlín</TextBlock>
+
+        <TextBlock x:Name="city" HorizontalAlignment="Center" Padding="0,250,0,0" FontWeight="DemiBold" FontSize="30"></TextBlock>
     </Grid>
 </Window>

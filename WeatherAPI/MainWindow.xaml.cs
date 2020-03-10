@@ -20,6 +20,9 @@ namespace WeatherAPI
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static string CoCity = "Zlin";
+        private string url = $"http://api.openweathermap.org/data/2.5/weather?q={CoCity}&appid=41a61665eb46babbfdb06c73a74b7ee8";
+
         public MainWindow()
         {
             InitializeComponent();
@@ -28,12 +31,16 @@ namespace WeatherAPI
 
         private async Task Load_Click()
         {
-            var weatherInfo = await Processor.Load<WeatherWeatherModel>("http://api.openweathermap.org/data/2.5/weather?q=zlin&appid=41a61665eb46babbfdb06c73a74b7ee8");
+            var weatherInfo = await Processor.Load<WeatherWeatherModel>(url);
+            var weatherRoot = await Processor.Load<WeatherModel>(url);
+
 
             weather.Text = $"Weather: {Math.Round(weatherInfo.Main.Temp - 273.15, 2)} °C";
             weatherFeels.Text = $"Feels like: {Math.Round(weatherInfo.Main.Feels_like - 273.15, 2)} °C";
             weatherMax.Text = $"Max temperature: {Math.Round(weatherInfo.Main.Temp_max - 273.15, 2)} °C";
             weatherMin.Text = $"Min temperature: {Math.Round(weatherInfo.Main.Temp_min - 273.15, 2)} °C";
+
+            city.Text = $"{weatherRoot.Name}";
 
         }
 
