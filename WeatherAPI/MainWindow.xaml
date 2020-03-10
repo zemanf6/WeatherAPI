@@ -4,16 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WeatherAPI"
-        mc:Ignorable="d" FontSize="22" Loaded="Window_Loaded"
-        Title="MainWindow" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+        mc:Ignorable="d" FontSize="22" Loaded="Window_Loaded" Icon="icon.png"
+        Title="Weather" Height="450" Width="800" WindowStartupLocation="CenterScreen">
+    <Window.Background>
+        <ImageBrush ImageSource="wallpaper.jpg"></ImageBrush>
+    </Window.Background>
     <Grid>
 
         <StackPanel>
-            <TextBlock x:Name="weatherType" Margin="10" FontWeight="Normal" FontSize="18"></TextBlock>
-            <TextBlock x:Name="weather" Margin="20" FontWeight="ExtraBold"></TextBlock>
-            <TextBlock x:Name="weatherFeels" Margin="20" FontWeight="Light" FontSize="16"></TextBlock>
-            <TextBlock x:Name="weatherMin" Margin="0" FontWeight="Medium" FontSize="17"></TextBlock>
-            <TextBlock x:Name="weatherMax" Margin="0" FontWeight="Medium" FontSize="17"></TextBlock>
+            <TextBlock x:Name="weather" HorizontalAlignment="Center" Margin="20" Padding="0,20,0,0" FontWeight="ExtraBold"></TextBlock>
+            <TextBlock x:Name="weatherFeels" HorizontalAlignment="Center" FontWeight="Light" FontSize="16"></TextBlock>
         </StackPanel>
+        <TextBlock x:Name="weatherMin" HorizontalAlignment="Left" Padding="25,150,0,0" FontWeight="Medium" FontSize="17"></TextBlock>
+        <TextBlock x:Name="weatherMax" HorizontalAlignment="Right" Padding="0,150,25,0" FontWeight="Medium" FontSize="17"></TextBlock>
+        
+        <TextBlock x:Name="city" HorizontalAlignment="Center" Padding="0,250,0,0" FontWeight="DemiBold" FontSize="30">Zlín</TextBlock>
     </Grid>
 </Window>
